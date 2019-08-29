@@ -16,8 +16,8 @@ export default function Acceleration() {
             <View>
                 <FlatList
                     data={AccelerationsData}
-                    keyExtractor={_keyExtractor}
-                    renderItem={_renderItem}
+                    keyExtractor={({ item }) => <AccelerationItem item={item} />}
+                    renderItem={item => item.slug}
                 />
             </View>
         </View>
